@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Vidro Âmbar Escuro/Castanho de Cerveja -->
+    <linearGradient id="amberGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a1205" />
+      <stop offset="20%" stop-color="#6e3208" />
+      <stop offset="45%" stop-color="#9a4d0e" />
+      <stop offset="65%" stop-color="#4a2106" />
+      <stop offset="85%" stop-color="#7a3a0a" />
+      <stop offset="100%" stop-color="#240e04" />
+    </linearGradient>
+
+    <!-- Vidro Dourado Claro (Cerveja mais clara ao centro) -->
+    <linearGradient id="amberGlassCenter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b1706" />
+      <stop offset="25%" stop-color="#8c420b" />
+      <stop offset="50%" stop-color="#b65e14" />
+      <stop offset="75%" stop-color="#662e08" />
+      <stop offset="100%" stop-color="#2e1205" />
+    </linearGradient>
+
+    <!-- Tampa Metálica Dourada (Crown Cap) -->
+    <linearGradient id="goldCap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c99728" />
+      <stop offset="35%" stop-color="#fae27a" />
+      <stop offset="70%" stop-color="#d49f2b" />
+      <stop offset="100%" stop-color="#805d12" />
+    </linearGradient>
+
+    <!-- Tampa Metálica Vermelha -->
+    <linearGradient id="redCap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991111" />
+      <stop offset="35%" stop-color="#e82c2c" />
+      <stop offset="70%" stop-color="#ad1818" />
+      <stop offset="100%" stop-color="#5e0909" />
+    </linearGradient>
+
+    <!-- Rótulo Vermelho / Dourado -->
+    <linearGradient id="labelRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a81313" />
+      <stop offset="50%" stop-color="#d91e1e" />
+      <stop offset="100%" stop-color="#870a0a" />
+    </linearGradient>
+
+    <!-- Rótulo Amarelo / Ouro -->
+    <linearGradient id="labelYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0a50f" />
+      <stop offset="50%" stop-color="#f5c72a" />
+      <stop offset="100%" stop-color="#bf8706" />
+    </linearGradient>
+
+    <!-- Sombra suave no chão -->
+    <radialGradient id="shadowFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(30,12,4,0.32)" />
+      <stop offset="60%" stop-color="rgba(30,12,4,0.08)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo Sólido Branco Puro -->
+  <rect width="500" height="500" fill="#FFFFFF" />
+
+  <!-- Sombra no Chão das Garrafas -->
+  <ellipse cx="250" cy="460" rx="145" ry="16" fill="url(#shadowFloor)" />
+
+  <!-- ==================== GARRAFA DA ESQUERDA (300ML) ==================== -->
+  <g transform="translate(-85, 10)">
+    <!-- Vidro Corpo Barrigudinha 300ml -->
+    <path d="M 235 95
+             C 230 145 190 175 190 225
+             L 190 405
+             C 190 435 205 446 220 448
+             L 280 448
+             C 295 446 310 435 310 405
+             L 310 225
+             C 310 175 270 145 265 95
+             Z"
+          fill="url(#amberGlass)"
+          stroke="#401905"
+          stroke-width="1.2" />
+    <!-- Gargalo e Bocal -->
+    <rect x="236" y="70" width="28" height="26" fill="url(#amberGlass)" />
+    <ellipse cx="250" cy="70" rx="15" ry="3.5" fill="#401905" />
+    <!-- Tampinha Coroa Vermelha -->
+    <path d="M 233 65 L 267 65 L 269 73 L 231 73 Z" fill="url(#redCap)" stroke="#550808" stroke-width="0.8" />
+    <!-- Rótulo de Pescoço -->
+    <path d="M 225 155 Q 250 162 275 155 L 278 178 Q 250 185 222 178 Z" fill="#d91e1e" stroke="#fae27a" stroke-width="0.8" />
+    <!-- Rótulo Principal -->
+    <rect x="195" y="245" width="110" height="90" rx="3" fill="url(#labelRed)" stroke="#fae27a" stroke-width="1.2" />
+    <rect x="200" y="250" width="100" height="80" rx="2" fill="none" stroke="#fae27a" stroke-dasharray="2,2" stroke-width="0.8" />
+    <text x="250" y="295" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" letter-spacing="1">BRAHMA</text>
+    <text x="250" y="313" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fae27a">CHOPP • 300ml</text>
+    <!-- Brilho Vertical -->
+    <path d="M 210 135 L 205 240 L 205 435" stroke="#FFFFFF" stroke-width="3" opacity="0.35" stroke-linecap="round" />
+  </g>
+
+  <!-- ==================== GARRAFA DA DIREITA (300ML) ==================== -->
+  <g transform="translate(85, 10)">
+    <!-- Vidro Corpo Barrigudinha 300ml -->
+    <path d="M 235 95
+             C 230 145 190 175 190 225
+             L 190 405
+             C 190 435 205 446 220 448
+             L 280 448
+             C 295 446 310 435 310 405
+             L 310 225
+             C 310 175 270 145 265 95
+             Z"
+          fill="url(#amberGlass)"
+          stroke="#401905"
+          stroke-width="1.2" />
+    <!-- Gargalo e Bocal -->
+    <rect x="236" y="70" width="28" height="26" fill="url(#amberGlass)" />
+    <ellipse cx="250" cy="70" rx="15" ry="3.5" fill="#401905" />
+    <!-- Tampinha Coroa Dourada -->
+    <path d="M 233 65 L 267 65 L 269 73 L 231 73 Z" fill="url(#goldCap)" stroke="#805d12" stroke-width="0.8" />
+    <!-- Rótulo de Pescoço -->
+    <path d="M 225 155 Q 250 162 275 155 L 278 178 Q 250 185 222 178 Z" fill="#0c4a8a" stroke="#ffffff" stroke-width="0.8" />
+    <!-- Rótulo Principal Azul/Branco (Antarctica/Original) -->
+    <rect x="195" y="245" width="110" height="90" rx="3" fill="#0d4685" stroke="#ffffff" stroke-width="1.2" />
+    <circle cx="250" cy="275" r="14" fill="#082b54" stroke="#ffffff" stroke-width="1" />
+    <text x="250" y="280" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#FFFFFF">❄️</text>
+    <text x="250" y="306" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" letter-spacing="1">ANTARCTICA</text>
+    <text x="250" y="322" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#B4D5FE">PILSEN • 300ml</text>
+    <!-- Brilho Vertical -->
+    <path d="M 290 135 L 295 240 L 295 435" stroke="#FFFFFF" stroke-width="3" opacity="0.35" stroke-linecap="round" />
+  </g>
+
+  <!-- ==================== GARRAFA CENTRAL (DESTAQUE FRONTAL 300ML) ==================== -->
+  <g transform="translate(0, 0)">
+    <!-- Vidro Corpo Barrigudinha 300ml Central -->
+    <path d="M 235 90
+             C 228 140 185 170 185 220
+             L 185 410
+             C 185 440 200 452 218 454
+             L 282 454
+             C 300 452 315 440 315 410
+             L 315 220
+             C 315 170 272 140 265 90
+             Z"
+          fill="url(#amberGlassCenter)"
+          stroke="#4a1f07"
+          stroke-width="1.5" />
+
+    <!-- Gargalo e Bocal com Frisos do Vidro Retornável -->
+    <rect x="235" y="65" width="30" height="28" fill="url(#amberGlassCenter)" />
+    <ellipse cx="250" cy="65" rx="16" ry="4" fill="#3b1706" />
+    <!-- Friso de Vidro no Gargalo -->
+    <path d="M 233 82 Q 250 86 267 82" stroke="#d4791a" stroke-width="1.2" fill="none" opacity="0.8" />
+
+    <!-- Tampinha Coroa Dourada Central -->
+    <path d="M 231 59 L 269 59 L 272 68 L 228 68 Z" fill="url(#goldCap)" stroke="#805d12" stroke-width="1" />
+    <!-- Dentes da Tampa Coroa -->
+    <line x1="233" y1="68" x2="233" y2="70" stroke="#fae27a" stroke-width="1.5" />
+    <line x1="239" y1="68" x2="239" y2="70" stroke="#fae27a" stroke-width="1.5" />
+    <line x1="245" y1="68" x2="245" y2="70" stroke="#fae27a" stroke-width="1.5" />
+    <line x1="251" y1="68" x2="251" y2="70" stroke="#fae27a" stroke-width="1.5" />
+    <line x1="257" y1="68" x2="257" y2="70" stroke="#fae27a" stroke-width="1.5" />
+    <line x1="263" y1="68" x2="263" y2="70" stroke="#fae27a" stroke-width="1.5" />
+
+    <!-- Rótulo de Pescoço Dourado / Skol / Malte -->
+    <path d="M 223 150 Q 250 158 277 150 L 280 174 Q 250 182 220 174 Z" fill="url(#labelYellow)" stroke="#ffffff" stroke-width="1" />
+    <text x="250" y="167" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="8.5" font-weight="900" fill="#222">RETORNÁVEL</text>
+
+    <!-- Rótulo Principal Dourado com Estandarte de Cerveja -->
+    <rect x="190" y="240" width="120" height="96" rx="4" fill="url(#labelYellow)" stroke="#FFFFFF" stroke-width="1.5" />
+    <rect x="195" y="245" width="110" height="86" rx="2" fill="none" stroke="#b07904" stroke-width="1" />
+    
+    <!-- Círculo Central do Rótulo -->
+    <circle cx="250" cy="275" r="17" fill="#dc2626" stroke="#FFFFFF" stroke-width="1.5" />
+    <text x="250" y="281" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF">★</text>
+
+    <text x="250" y="308" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-size="18" font-weight="900" fill="#1A1A1A" letter-spacing="1">CERVEJA</text>
+    <text x="250" y="324" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#884d00">LITRINHO • 300ml</text>
+
+    <!-- Gotículas de Condensação Gelada (Trincando) -->
+    <g fill="#FFFFFF" opacity="0.8">
+      <circle cx="205" cy="180" r="2.5" />
+      <circle cx="220" cy="195" r="1.8" />
+      <circle cx="280" cy="185" r="2.2" />
+      <circle cx="295" cy="195" r="1.5" />
+      <circle cx="198" cy="225" r="2" />
+      <circle cx="302" cy="225" r="2.4" />
+      <circle cx="202" cy="355" r="2.8" />
+      <circle cx="225" cy="370" r="1.8" />
+      <circle cx="245" cy="360" r="3" />
+      <circle cx="270" cy="380" r="2" />
+      <circle cx="295" cy="365" r="2.6" />
+      <circle cx="210" cy="415" r="2.2" />
+      <circle cx="235" cy="430" r="2.5" />
+      <circle cx="265" cy="420" r="3.2" />
+      <circle cx="290" cy="430" r="2" />
+    </g>
+
+    <!-- Reflexos Especulares do Vidro Central -->
+    <path d="M 208 120 L 202 230 L 202 345 L 206 445" stroke="#FFFFFF" stroke-width="4.5" opacity="0.65" stroke-linecap="round" />
+    <path d="M 216 135 L 212 225 L 212 350 L 215 435" stroke="#FFFFFF" stroke-width="2" opacity="0.4" stroke-linecap="round" />
+  </g>
+
+  <!-- Selo "ESTUPIDAMENTE GELADA" no Canto Superior -->
+  <g transform="translate(380, 70)">
+    <circle cx="0" cy="0" r="36" fill="#0284c7" stroke="#FFFFFF" stroke-width="2.5" />
+    <text x="0" y="-8" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="10" font-weight="900" fill="#FFFFFF">300ML</text>
+    <text x="0" y="6" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#bae6fd">TRINCANDO</text>
+    <text x="0" y="20" text-anchor="middle" font-family="sans-serif" font-size="11">❄️</text>
+  </g>
+</svg>

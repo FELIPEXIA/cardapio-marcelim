@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente da garrafa de água transparente/azul cristal -->
+    <linearGradient id="waterBottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bce6f8" stop-opacity="0.85" />
+      <stop offset="25%" stop-color="#e2f5fd" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#f4fbfe" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#cdecf9" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#9dd5ee" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Gradiente da tampa azul royal -->
+    <linearGradient id="capBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b48a8" />
+      <stop offset="35%" stop-color="#2474e6" />
+      <stop offset="70%" stop-color="#145bc4" />
+      <stop offset="100%" stop-color="#083884" />
+    </linearGradient>
+
+    <!-- Gradiente do rótulo -->
+    <linearGradient id="labelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a469f" />
+      <stop offset="50%" stop-color="#1b63c7" />
+      <stop offset="100%" stop-color="#0d3f8c" />
+    </linearGradient>
+
+    <!-- Sombra suave no chão -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(10,50,100,0.22)" />
+      <stop offset="60%" stop-color="rgba(10,50,100,0.06)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+
+    <!-- Reflexo especular de vidro/plástico -->
+    <linearGradient id="specular" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="30%" stop-color="rgba(255,255,255,0.7)" />
+      <stop offset="45%" stop-color="rgba(255,255,255,0.9)" />
+      <stop offset="55%" stop-color="rgba(255,255,255,0.2)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo Sólido Branco Puro -->
+  <rect width="500" height="500" fill="#FFFFFF" />
+
+  <!-- Sombra no Chão -->
+  <ellipse cx="250" cy="462" rx="85" ry="14" fill="url(#shadowGrad)" />
+
+  <!-- ==================== GARRAFA ==================== -->
+  <!-- Gargalo e Rosca -->
+  <rect x="238" y="58" width="24" height="20" rx="2" fill="url(#waterBottle)" stroke="#8bc4e4" stroke-width="1" />
+  
+  <!-- Tampa Azul Royal com Frisos -->
+  <rect x="234" y="40" width="32" height="22" rx="3" fill="url(#capBlue)" stroke="#093d8e" stroke-width="1.2" />
+  <line x1="240" y1="40" x2="240" y2="62" stroke="#4a8ef0" stroke-width="1.2" opacity="0.7" />
+  <line x1="246" y1="40" x2="246" y2="62" stroke="#4a8ef0" stroke-width="1.2" opacity="0.7" />
+  <line x1="252" y1="40" x2="252" y2="62" stroke="#4a8ef0" stroke-width="1.2" opacity="0.7" />
+  <line x1="258" y1="40" x2="258" y2="62" stroke="#4a8ef0" stroke-width="1.2" opacity="0.7" />
+  <!-- Anel de Lacre da Tampa -->
+  <rect x="235" y="60" width="30" height="4" fill="#0c4396" />
+
+  <!-- Corpo da Garrafa Pet (Ombro suave, cintura e base) -->
+  <path d="M 238 78
+           C 230 115 185 140 185 180
+           L 185 245
+           C 185 255 190 265 190 275
+           C 190 285 185 295 185 305
+           L 185 410
+           C 185 435 195 448 215 450
+           L 285 450
+           C 305 448 315 435 315 410
+           L 315 305
+           C 315 295 310 285 310 275
+           C 310 265 315 255 315 245
+           L 315 180
+           C 315 140 270 115 262 78
+           Z"
+        fill="url(#waterBottle)"
+        stroke="#7ebfe5"
+        stroke-width="1.5" />
+
+  <!-- Frisos de Relevo da Garrafa Pet (Cintura e Ondulações) -->
+  <path d="M 185 195 Q 250 205 315 195" fill="none" stroke="#8bc6e6" stroke-width="1.5" opacity="0.6" />
+  <path d="M 186 215 Q 250 225 314 215" fill="none" stroke="#8bc6e6" stroke-width="1.5" opacity="0.6" />
+  <path d="M 186 385 Q 250 395 314 385" fill="none" stroke="#8bc6e6" stroke-width="1.5" opacity="0.6" />
+  <path d="M 186 405 Q 250 415 314 405" fill="none" stroke="#8bc6e6" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Bolhas Efervescentes de Gás Carbonatado -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <circle cx="215" cy="190" r="3" />
+    <circle cx="230" cy="170" r="2" />
+    <circle cx="245" cy="185" r="3.5" />
+    <circle cx="265" cy="165" r="2.5" />
+    <circle cx="280" cy="180" r="3" />
+    <circle cx="205" cy="220" r="2" />
+    <circle cx="225" cy="210" r="3" />
+    <circle cx="270" cy="215" r="2.5" />
+    <circle cx="295" cy="205" r="3.5" />
+    
+    <circle cx="200" cy="360" r="3.5" />
+    <circle cx="220" cy="380" r="2" />
+    <circle cx="240" cy="370" r="4" />
+    <circle cx="260" cy="390" r="2.5" />
+    <circle cx="285" cy="365" r="3" />
+    <circle cx="300" cy="385" r="2" />
+
+    <circle cx="210" cy="425" r="3" />
+    <circle cx="235" cy="435" r="2" />
+    <circle cx="250" cy="420" r="3.5" />
+    <circle cx="275" cy="430" r="2.5" />
+    <circle cx="295" cy="425" r="3" />
+  </g>
+
+  <!-- ==================== RÓTULO ==================== -->
+  <!-- Faixa do Rótulo -->
+  <rect x="183" y="240" width="134" height="98" fill="url(#labelGrad)" rx="2" />
+  <!-- Borda Prateada no Topo e Rodapé do Rótulo -->
+  <rect x="183" y="240" width="134" height="4" fill="#C8D4E2" />
+  <rect x="183" y="334" width="134" height="4" fill="#C8D4E2" />
+
+  <!-- Selo "COM GÁS" em Destaque Vermelho/Dourado -->
+  <rect x="205" y="250" width="90" height="20" rx="10" fill="#E22424" stroke="#FFF" stroke-width="1.2" />
+  <text x="250" y="264"
+        text-anchor="middle"
+        font-family="'Arial Black', sans-serif"
+        font-size="11"
+        font-weight="900"
+        letter-spacing="1"
+        fill="#FFFFFF">
+    ★ COM GÁS ★
+  </text>
+
+  <!-- Título do Rótulo: ÁGUA MINERAL -->
+  <text x="250" y="292"
+        text-anchor="middle"
+        font-family="'Arial Black', sans-serif"
+        font-size="13"
+        font-weight="900"
+        letter-spacing="0.5"
+        fill="#FFFFFF">
+    ÁGUA MINERAL
+  </text>
+  <text x="250" y="306"
+        text-anchor="middle"
+        font-family="sans-serif"
+        font-size="10"
+        font-weight="700"
+        letter-spacing="1.5"
+        fill="#B4D5FE">
+    NATURAL DA FONTE
+  </text>
+  <text x="250" y="324"
+        text-anchor="middle"
+        font-family="'Arial Black', sans-serif"
+        font-size="10"
+        font-weight="800"
+        fill="#FFFFFF">
+    500 ml
+  </text>
+
+  <!-- ==================== REFLEXO ESPECULAR VERTICAL ==================== -->
+  <path d="M 210 120
+           L 205 240
+           L 205 340
+           L 208 440"
+        stroke="#FFFFFF"
+        stroke-width="5"
+        stroke-linecap="round"
+        opacity="0.75" />
+  <path d="M 218 135
+           L 215 235
+           L 215 345
+           L 217 430"
+        stroke="#FFFFFF"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        opacity="0.5" />
+</svg>

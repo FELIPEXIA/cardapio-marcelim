@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0F0F12">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="Cardápio Digital Mobile-First do Churrasquim do Marcelim - O Point de Santo Antônio. Monte seu rascunho de pedido pelo celular!">
+  <title>Churrasquim do Marcelim | O Point de Santo Antônio</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Tela de Boas-Vindas (Splash Screen Mobile) -->
+  <div id="splash-screen" class="splash-screen" role="dialog" aria-modal="true" aria-label="Boas-vindas ao Churrasquim do Marcelim">
+    <div class="splash-ember-glow"></div>
+    <div class="splash-sparks">
+      <span class="spark s1"></span>
+      <span class="spark s2"></span>
+      <span class="spark s3"></span>
+      <span class="spark s4"></span>
+      <span class="spark s5"></span>
+    </div>
+    <div class="splash-content">
+      <div class="splash-logo-container">
+        <img src="assets/images/logo_marcelim.svg" alt="Churrasquim do Marcelim" class="splash-logo-img">
+      </div>
+      <div class="splash-text-group">
+        <h2 class="splash-welcome-title">Bem-vindo ao Churrasquim do Marcelim</h2>
+        <p class="splash-welcome-subtitle">O Point de Santo Antônio</p>
+      </div>
+
+      <div class="splash-loader-box">
+        <div class="splash-flame-icon">🔥</div>
+        <p id="splash-loading-text" class="splash-loading-text">Carregando o cardápio da Mesa...</p>
+        <div class="splash-progress-track">
+          <div class="splash-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app-container">
+
+    <!-- Top Sticky Header -->
+    <header class="main-header">
+      <!-- Fachada Imponente da Marca com Logo Oficial -->
+      <div class="header-brand-facade">
+        <h1 class="sr-only">Churrasquim do Marcelim - O Point de Santo Antônio</h1>
+        <div class="brand-hero-logo">
+          <img src="assets/images/logo_marcelim.svg" alt="Logo Oficial Churrasquim do Marcelim" class="brand-facade-img">
+        </div>
+        <p class="brand-subtitle-facade">O Point de Santo Antônio</p>
+      </div>
+
+      <!-- Barra de Controles: Status, Mesa e Wi-Fi -->
+      <div class="header-controls-bar">
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span class="status-text">Aberto Agora</span>
+        </div>
+
+        <div class="header-quick-actions">
+          <!-- Botão Seletor de Mesa -->
+          <button id="btn-mesa-selector" class="mesa-badge-btn" aria-label="Alterar número da mesa">
+            <span class="mesa-icon">📍</span>
+            <span id="current-table-label">Mesa 04</span>
+            <span class="dropdown-arrow">▾</span>
+          </button>
+
+          <!-- Botão Info Wi-Fi -->
+          <button class="wifi-pill" id="btn-info-modal" aria-label="Ver Wi-Fi e Horários">
+            <span>📶 Wi-Fi</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navegação por Categorias (Layout Grade / Flex-Wrap) -->
+      <nav class="categories-nav" aria-label="Categorias do Cardápio">
+        <div class="categories-grid" id="categories-container">
+          <!-- Preenchido via JavaScript -->
+        </div>
+      </nav>
+
+      <!-- Quick Search Bar -->
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" id="search-input" placeholder="Buscar espeto, picanha, chopp, porção..." autocomplete="off">
+          <button id="btn-clear-search" class="clear-search-btn" style="display: none;" aria-label="Limpar busca">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="menu-content" id="menu-content">
+      <!-- Banner Promocional / Boas-Vindas Mobile -->
+      <section class="welcome-card">
+        <div class="welcome-card-content">
+          <span class="welcome-tag">💡 COMO FUNCIONA O POINT</span>
+          <h2 class="welcome-headline">Sabor da Brasa com a Rapidez que Você Merece!</h2>
+          <p class="welcome-desc">
+            Navegue pelo cardápio, monte seu <strong>rascunho de pedido</strong> com calma e, quando quiser, chame o atendente para anotar direto no bloquinho!
+          </p>
+        </div>
+        <div class="welcome-visual-glow"></div>
+      </section>
+
+      <!-- Container Dinâmico de Produtos -->
+      <div id="products-catalog" class="products-catalog">
+        <!-- Seções e cards renderizados via JavaScript -->
+      </div>
+
+      <!-- Rodapé Institucional e Aviso Legal -->
+      <footer class="app-footer">
+        <div class="footer-disclaimer-card">
+          <div class="disclaimer-icon">⚠️</div>
+          <div class="disclaimer-text">
+            <strong>Aviso de Conferência:</strong>
+            <p>Este cardápio digital é uma ferramenta para sua conveniência e rascunho de mesa. O valor oficial, itens disponíveis e fechamento de conta são validados diretamente na comanda física do seu atendente.</p>
+          </div>
+        </div>
+
+        <div class="footer-details">
+          <div class="footer-logo">
+            <img src="assets/images/logo_marcelim.svg" alt="Churrasquim do Marcelim" style="height: 38px; width: auto; margin-bottom: 4px;">
+          </div>
+          <p class="footer-sub">O Point mais gostoso de Santo Antônio</p>
+          <div class="footer-info-chips">
+            <span class="info-chip">🕒 Seg a Sáb: 16:00 às 23:00</span>
+            <span class="info-chip">📍 Av São Paulo, Santo Antônio, Cariacica</span>
+            <span class="info-chip">📶 Wi-Fi: Marcelim_Cliente</span>
+          </div>
+          <p class="footer-copy">© 2026 Churrasquim do Marcelim • Cardápio Digital Mobile-First</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Barra Flutuante de Rascunho (Floating Action Bar) -->
+    <aside id="floating-draft-bar" class="floating-draft-bar" style="display: none;">
+      <div class="draft-bar-inner" id="btn-open-draft-drawer">
+        <div class="draft-bar-left">
+          <div class="draft-badge-counter">
+            <span id="draft-item-count">0</span>
+          </div>
+          <div class="draft-bar-info">
+            <span class="draft-bar-label">Rascunho da Mesa</span>
+            <strong class="draft-bar-total" id="draft-total-preview">R$ 0,00</strong>
+          </div>
+        </div>
+        <div class="draft-bar-right">
+          <span class="draft-btn-text">Ver Rascunho</span>
+          <svg class="chevron-up-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Bottom Sheet: Gaveta de Rascunho / Carrinho -->
+    <div id="drawer-backdrop" class="modal-backdrop"></div>
+    <div id="draft-drawer" class="bottom-sheet-drawer" aria-hidden="true">
+      <div class="drawer-header-handle" id="drawer-drag-handle">
+        <div class="drag-bar"></div>
+      </div>
+
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <h2 class="drawer-title">Rascunho de Consumo</h2>
+          <span class="drawer-table-pill" id="drawer-table-display">Mesa 04</span>
+        </div>
+        <button id="btn-close-drawer" class="close-drawer-btn" aria-label="Fechar rascunho">✕</button>
+      </div>
+
+      <div class="drawer-content">
+        <!-- Aviso Legal em Destaque -->
+        <div class="drawer-alert-box">
+          <span class="alert-icon">ℹ️</span>
+          <p>
+            <strong>Atenção:</strong> Esta lista é seu rascunho de conferência. O pedido oficial é anotado na <strong>comanda física</strong> pelo atendente.
+          </p>
+        </div>
+
+        <!-- Lista de Itens do Rascunho -->
+        <div id="draft-items-list" class="draft-items-list">
+          <!-- Renderizado dinamicamente -->
+        </div>
+
+        <!-- Campo de Observação Geral da Mesa -->
+        <div class="draft-notes-section">
+          <label for="order-notes" class="notes-label">
+            <span>📝 Observação rápida para a mesa:</span>
+          </label>
+          <textarea id="order-notes" placeholder="Ex: Carne ao ponto, trazer 2 copos com gelo e limão, mandioca bem crocante..." rows="2"></textarea>
+        </div>
+
+        <!-- Resumo de Valores -->
+        <div class="draft-summary-box">
+          <div class="summary-line">
+            <span>Quantidade de itens:</span>
+            <span id="summary-items-qty">0 itens</span>
+          </div>
+          <div class="summary-line total-line">
+            <span>Total Estimado do Rascunho:</span>
+            <strong id="summary-total-amount">R$ 0,00</strong>
+          </div>
+          <p class="summary-footnote">* Preços sujeitos a alterações e confirmação do garçom.</p>
+        </div>
+      </div>
+
+      <!-- Drawer Footer com Botão de Chamar Atendente -->
+      <div class="drawer-footer">
+        <button id="btn-call-waiter" class="btn-primary-action">
+          <span class="btn-icon">🛎️</span>
+          <div class="btn-text-group">
+            <span class="btn-main-title">Chamar Atendente para Anotar</span>
+            <span class="btn-subtitle">Abrir comanda de fácil leitura para o garçom</span>
+          </div>
+        </button>
+
+        <button id="btn-clear-draft" class="btn-secondary-link">
+          Limpar Rascunho da Mesa
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal: Modo Atendente / Comanda de Apoio Rápido -->
+    <div id="waiter-modal-backdrop" class="modal-backdrop"></div>
+    <div id="waiter-modal" class="modal-center-container" aria-hidden="true">
+      <div class="waiter-ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-status-chip">PRONTO PARA A COMANDA</div>
+          <div class="ticket-table-number" id="ticket-table-badge">MESA 04</div>
+          <p class="ticket-instruction">Mostre esta tela para o atendente copiar rápido no bloquinho!</p>
+          <button id="btn-close-waiter-modal" class="close-ticket-btn" aria-label="Voltar">✕</button>
+        </div>
+
+        <div class="ticket-body">
+          <div class="ticket-timestamp">
+            <span id="ticket-time">--:--</span> • Churrasquim do Marcelim
+          </div>
+
+          <div class="ticket-divider"></div>
+
+          <div id="ticket-items-list" class="ticket-items-list">
+            <!-- Itens estruturados para o bloquinho do garçom -->
+          </div>
+
+          <div id="ticket-notes-display" class="ticket-notes-box" style="display: none;">
+            <strong>Obs do Cliente:</strong>
+            <p id="ticket-notes-text"></p>
+          </div>
+
+          <div class="ticket-divider"></div>
+
+          <div class="ticket-total-row">
+            <span>Total da Mesa (Estimado):</span>
+            <strong id="ticket-total-value">R$ 0,00</strong>
+          </div>
+        </div>
+
+        <div class="ticket-footer-actions">
+          <!-- Botão Farol de Mesa (Sinalizador) -->
+          <button id="btn-beacon-mode" class="beacon-action-btn">
+            <span class="beacon-icon">🚨</span>
+            <span>Farol de Mesa (Chamar Garçom de Longe)</span>
+          </button>
+
+          <button id="btn-copy-ticket" class="copy-action-btn">
+            <span class="copy-icon">📋</span>
+            <span>Copiar Resumo do Pedido</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tela Cheia Farol de Mesa (Table Beacon Mode) -->
+    <div id="beacon-fullscreen" class="beacon-screen" style="display: none;">
+      <div class="beacon-pulse-ring"></div>
+      <div class="beacon-content">
+        <span class="beacon-top-label">POR FAVOR, ATENDENTE!</span>
+        <h2 class="beacon-table-number" id="beacon-table-num">MESA 04</h2>
+        <p class="beacon-sub">Rascunho de pedido pronto na mesa</p>
+        <button id="btn-exit-beacon" class="btn-exit-beacon">Voltar para o Cardápio</button>
+      </div>
+    </div>
+
+    <!-- Modal: Trocar de Mesa -->
+    <div id="table-modal-backdrop" class="modal-backdrop"></div>
+    <div id="table-modal" class="modal-center-container" aria-hidden="true">
+      <div class="table-modal-box">
+        <div class="modal-box-header">
+          <h3>Qual é o número da sua mesa?</h3>
+          <button id="btn-close-table-modal" class="modal-close-icon">✕</button>
+        </div>
+        <p class="table-modal-desc">Informe o número que consta no adesivo ou placa da sua mesa:</p>
+        
+        <div class="table-input-group">
+          <span class="table-prefix">Mesa</span>
+          <input type="number" id="custom-table-input" min="1" max="50" placeholder="Ex: 04" inputmode="numeric">
+          <button id="btn-save-table" class="btn-save-table">Salvar</button>
+        </div>
+
+        <div class="quick-tables-list">
+          <span class="quick-tables-label">Mesas Frequentes:</span>
+          <div class="quick-table-chips">
+            <button class="quick-table-btn" data-mesa="01">01</button>
+            <button class="quick-table-btn" data-mesa="02">02</button>
+            <button class="quick-table-btn" data-mesa="03">03</button>
+            <button class="quick-table-btn" data-mesa="04">04</button>
+            <button class="quick-table-btn" data-mesa="05">05</button>
+            <button class="quick-table-btn" data-mesa="06">06</button>
+            <button class="quick-table-btn" data-mesa="07">07</button>
+            <button class="quick-table-btn" data-mesa="Balcão">Balcão</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Wi-Fi e Informações -->
+    <div id="info-modal-backdrop" class="modal-backdrop"></div>
+    <div id="info-modal" class="modal-center-container" aria-hidden="true">
+      <div class="table-modal-box">
+        <div class="modal-box-header">
+          <h3>Informações do Point</h3>
+          <button id="btn-close-info-modal" class="modal-close-icon">✕</button>
+        </div>
+        
+        <div class="point-info-list">
+          <div class="info-row">
+            <span class="info-row-icon">📶</span>
+            <div>
+              <strong>Wi-Fi dos Clientes:</strong>
+              <p>Rede: <code>Marcelim_Cliente</code></p>
+              <p>Senha: <code>pointdesantoantonio</code></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row-icon">🕒</span>
+            <div>
+              <strong>Horário de Funcionamento:</strong>
+              <p>Segunda a Sábado: das 16:00 às 23:00</p>
+              <p>Domingo: Fechado para descanso da brasa</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row-icon">📍</span>
+            <div>
+              <strong>Endereço:</strong>
+              <p>Av São Paulo, Santo Antônio, Cariacica</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row-icon">💳</span>
+            <div>
+              <strong>Formas de Pagamento:</strong>
+              <p>Pix, Cartões de Débito, Crédito e Dinheiro direto com o garçom no fechamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Opções e Observações de Item -->
+    <div id="item-modal-backdrop" class="modal-backdrop"></div>
+    <div id="item-modal" class="modal-center-container" aria-hidden="true">
+      <div class="item-modal-box" id="item-modal-content">
+        <!-- Renderizado dinamicamente pelo JS -->
+      </div>
+    </div>
+
+    <!-- Toast Notification Flutuante -->
+    <div id="toast-notification" class="toast-notification" style="display: none;">
+      <span id="toast-icon">🔥</span>
+      <span id="toast-message">Item adicionado ao rascunho!</span>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

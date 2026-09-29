@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 4 304 156" width="100%" height="100%">
+  <defs>
+    <!-- Filtro de sombra e relevo -->
+    <filter id="badge-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#FF4A1C" flood-opacity="0.3"/>
+    </filter>
+
+    <linearGradient id="yellow-gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275" />
+      <stop offset="50%" stop-color="#FFCF33" />
+      <stop offset="100%" stop-color="#EAA700" />
+    </linearGradient>
+
+    <linearGradient id="wine-red-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C22838" />
+      <stop offset="100%" stop-color="#83121F" />
+    </linearGradient>
+
+    <linearGradient id="skewer-meat-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9E2A2B" />
+      <stop offset="50%" stop-color="#540B0E" />
+      <stop offset="100%" stop-color="#330406" />
+    </linearGradient>
+
+    <linearGradient id="skewer-meat-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E07A5F" />
+      <stop offset="50%" stop-color="#B54628" />
+      <stop offset="100%" stop-color="#7A2209" />
+    </linearGradient>
+
+    <linearGradient id="skewer-wood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E9C46A" />
+      <stop offset="100%" stop-color="#B08933" />
+    </linearGradient>
+
+    <style>
+      .brand-arch-text {
+        font-family: 'Outfit', 'Arial Black', sans-serif;
+        font-weight: 900;
+        font-size: 19px;
+        letter-spacing: 3.5px;
+        fill: url(#wine-red-grad);
+        stroke: #40060C;
+        stroke-width: 0.6px;
+      }
+      .brand-do-text {
+        font-family: 'Outfit', 'Arial Black', sans-serif;
+        font-weight: 900;
+        font-size: 14px;
+        letter-spacing: 4px;
+        fill: url(#wine-red-grad);
+      }
+      .brand-main-name {
+        font-family: 'Outfit', 'Georgia', serif;
+        font-weight: 900;
+        font-size: 47px;
+        letter-spacing: -1.2px;
+        fill: url(#yellow-gold-grad);
+        filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.95));
+      }
+    </style>
+  </defs>
+
+  <!-- Brilhos / Brasas Sutis de Fundo -->
+  <circle cx="45" cy="50" r="1.5" fill="#FF7A00" opacity="0.8"/>
+  <circle cx="280" cy="40" r="1.8" fill="#FFB703" opacity="0.7"/>
+  <circle cx="295" cy="110" r="1.4" fill="#FF3D00" opacity="0.8"/>
+  <circle cx="30" cy="125" r="1.6" fill="#FFB703" opacity="0.6"/>
+  <circle cx="160" cy="15" r="2" fill="#FF5412" opacity="0.5"/>
+
+  <!-- Placa / Emblema com Borda Dupla Amarela -->
+  <!-- Borda Externa Amarela -->
+  <path d="M 40 32 
+           C 110 24, 210 24, 280 32 
+           C 298 34, 306 48, 306 68 
+           L 306 108 
+           C 306 132, 292 144, 275 147 
+           C 210 156, 110 156, 45 147 
+           C 28 144, 14 132, 14 108 
+           L 14 68 
+           C 14 48, 22 34, 40 32 Z" 
+        fill="#0E0D0C" 
+        stroke="url(#yellow-gold-grad)" 
+        stroke-width="7" 
+        stroke-linejoin="round"
+        filter="url(#badge-glow)" />
+
+  <!-- Borda Interna Amarela Fina -->
+  <path d="M 44 38 
+           C 112 31, 208 31, 276 38 
+           C 292 40, 298 52, 298 70 
+           L 298 106 
+           C 298 126, 286 136, 271 139 
+           C 208 147, 112 147, 49 139 
+           C 34 136, 22 126, 22 106 
+           L 22 70 
+           C 22 52, 28 40, 44 38 Z" 
+        fill="#0C0A09" 
+        stroke="url(#yellow-gold-grad)" 
+        stroke-width="2.2" 
+        stroke-linejoin="round" />
+
+  <!-- Espetinhos Cruzados no Topo (X) -->
+  <g transform="translate(160, 26)">
+    <!-- Espeto da Esquerda para Direita (\) -->
+    <g transform="rotate(25)">
+      <!-- Vareta de madeira -->
+      <line x1="-54" y1="0" x2="54" y2="0" stroke="url(#skewer-wood)" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Carnes / Pedaços grelhados -->
+      <rect x="-36" y="-8.5" width="13" height="17" rx="3" fill="url(#skewer-meat-1)" stroke="#1A0204" stroke-width="1.2"/>
+      <line x1="-31" y1="-5" x2="-31" y2="5" stroke="#120102" stroke-width="1.5"/>
+      
+      <rect x="-20" y="-9" width="12" height="18" rx="3" fill="#E9C46A" stroke="#402802" stroke-width="1.2"/>
+      <line x1="-15" y1="-6" x2="-15" y2="6" stroke="#5E3C00" stroke-width="1.5"/>
+
+      <rect x="-5" y="-8.5" width="13" height="17" rx="3" fill="url(#skewer-meat-2)" stroke="#2B0502" stroke-width="1.2"/>
+      <line x1="1" y1="-5" x2="1" y2="5" stroke="#1F0402" stroke-width="1.5"/>
+
+      <rect x="11" y="-8" width="12" height="16" rx="3" fill="#2A9D8F" stroke="#052420" stroke-width="1.2"/>
+
+      <rect x="25" y="-8.5" width="13" height="17" rx="3" fill="url(#skewer-meat-1)" stroke="#1A0204" stroke-width="1.2"/>
+      <line x1="31" y1="-5" x2="31" y2="5" stroke="#120102" stroke-width="1.5"/>
+    </g>
+
+    <!-- Espeto da Direita para Esquerda (/) -->
+    <g transform="rotate(-25)">
+      <!-- Vareta de madeira -->
+      <line x1="-54" y1="0" x2="54" y2="0" stroke="url(#skewer-wood)" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Carnes / Pedaços grelhados -->
+      <rect x="-36" y="-8.5" width="13" height="17" rx="3" fill="url(#skewer-meat-2)" stroke="#2B0502" stroke-width="1.2"/>
+      <line x1="-30" y1="-5" x2="-30" y2="5" stroke="#1F0402" stroke-width="1.5"/>
+
+      <rect x="-20" y="-8" width="12" height="16" rx="3" fill="#E76F51" stroke="#3D1309" stroke-width="1.2"/>
+
+      <rect x="-5" y="-9" width="12" height="18" rx="3" fill="#F4A261" stroke="#482404" stroke-width="1.2"/>
+      <line x1="1" y1="-6" x2="1" y2="6" stroke="#522904" stroke-width="1.5"/>
+
+      <rect x="10" y="-8.5" width="13" height="17" rx="3" fill="url(#skewer-meat-1)" stroke="#1A0204" stroke-width="1.2"/>
+      <line x1="16" y1="-5" x2="16" y2="5" stroke="#120102" stroke-width="1.5"/>
+
+      <rect x="25" y="-8" width="12" height="16" rx="3" fill="#E9C46A" stroke="#402802" stroke-width="1.2"/>
+    </g>
+  </g>
+
+  <!-- Tipografia "CHURRASQUIM" em Vinho / Vermelho Brasa -->
+  <text x="160" y="67" text-anchor="middle" class="brand-arch-text">CHURRASQUIM</text>
+
+  <!-- Tipografia "DO" -->
+  <text x="160" y="85" text-anchor="middle" class="brand-do-text">DO</text>
+
+  <!-- Tipografia "Marcelim" (com 'M' maiúsculo e 'm' no final) em Amarelo Ouro Vintage -->
+  <!-- Sombra escura de profundidade para dar o efeito 3D característico da marca -->
+  <text x="160" y="132" text-anchor="middle" class="brand-main-name" fill="#3D2000" dy="2.5">Marcelim</text>
+  <!-- Texto principal -->
+  <text x="160" y="132" text-anchor="middle" class="brand-main-name">Marcelim</text>
+
+  <!-- Detalhe decorativo sutil nas laterais da palavra Marcelim -->
+  <circle cx="36" cy="118" r="2.2" fill="url(#yellow-gold-grad)"/>
+  <circle cx="284" cy="118" r="2.2" fill="url(#yellow-gold-grad)"/>
+</svg>
